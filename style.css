@@ -1,0 +1,105 @@
+/*
+SELETOR{
+    PROPRIEDADE: VALOR;
+}
+*/
+
+/*Reset*/
+*{
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    background-image: url(img/background.webp);
+    background-size: cover; /*imagem de fundo cobre toda a área*/
+    background-position: top center;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1{
+    font-size: 48px;
+    margin-bottom: 12px;
+    }
+
+h2{
+    font-size: 24px;
+    margin-top: 26px;
+    margin-bottom: 12px;
+}
+
+.genero{
+    font-size: 18px;
+}
+
+/*Selecionando o strong que está dentro do elemento genero*/
+.genero strong{
+    color: aqua;
+}
+
+.container{
+    /*background-color: pink;*/
+    width: 96%; /*largura*/
+    max-width: 1259px; /*largura máxima*/
+    height: auto; /*altura*/
+
+    display: flex; /*habilita o uso do flexbox*/
+    align-items: center;
+    column-gap: 24px; /*Espaço entre os filho*/
+}
+
+.btn{
+    color: #ffffff;
+    text-decoration: none; /*Retirar o sublinhado padrão do link*/
+    display: inline-block;
+    margin-top: 48px;
+    font-size: 20px;
+    padding: 18px 60px; /*vertical (top/bottom) horizontal (left/right)*/
+
+    border-radius: 10px;
+
+    border: 1px solid #ffffff;
+    /*
+    border-style: solid;
+    border-width: 1px;
+    */
+
+}
+
+.btn:hover{
+    color: #00f2ff;
+    border-color: aqua;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*Media Queries -> São condicionais para alterar o layout*/
+
+@media(max-width: 767px){
+
+    .poster{
+        display: none;
+    }
+    
+}@media print{
+
+    body{
+        color: #000000;
+    }
+
+    .btn{
+         display: none;
+    }
+       
+    .genero strong{
+        color: #5a5a5a;
+    }
+
+
+}
